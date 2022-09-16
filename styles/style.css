@@ -1,0 +1,120 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+button, summary {
+	cursor: pointer;
+}
+
+@font-face {
+ font-family: drukcond;
+ src: url("../fonts/DrukCond-Super-Cy-Gr-Web.ttf");
+}
+
+@font-face {
+	font-family:neue;
+	src: url("../fonts/NeueMontreal-Regular.otf");
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text:#ffffff;
+	--color-background:#000000;
+}
+  
+@keyframes marquee {
+	from { transform: translateX(0); }
+	to { transform: translateX(-50%); }
+  }
+
+@keyframes scrolling {
+	0% { transform: translateX(0); }
+	100% { transform: translateY(calc(-1*20*9));}
+}
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+/* jouw code */
+
+body {
+  color:var(--color-text);
+  background-color:var(--color-background);
+  margin : 0;
+  font-family: neue; 
+}
+
+p {
+	line-height: 1.5rem;
+	text-align: center;
+}
+
+h2 {
+	font-family: drukcond;
+	font-size: 2rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-align: center;
+}
+
+header {
+	background-color: #000000;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #242424;
+	text-transform: uppercase;
+	left: 0;
+	right: 0;
+}
+
+header ul{
+	display: flex;
+	justify-content: space-around;
+	list-style-type: none;
+
+}
+
+header a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.marquee {
+	position: relative;
+	width: 100vw;
+	max-width: 100%;
+	height: 10rem;
+	color: #ffffff;
+	font-size: 6.66rem;
+	line-height: 12rem;
+	margin-right: 0rem;
+	text-transform: uppercase;
+	letter-spacing: 0.22rem;
+	font-family: drukcond;
+  }
+  
+  .track {
+	position: absolute;
+	white-space: nowrap;
+	will-change: transform;
+	animation: marquee 25s linear infinite;
+  }
+
+  .image-container {
+	width: 100vw;
+	display: flex;
+  }
+  
+  .image-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center; /* normally it's the default value */
+  }
