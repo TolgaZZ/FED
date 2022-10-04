@@ -10,13 +10,13 @@ button, summary {
 	font-size: 1rem;
 	border: none;
 	outline: none;
-	font-family: neue;
+	font-family: neue, var(--font-fallback);
 	text-transform: uppercase;
 	cursor: pointer;
 	margin: 0.5rem 1rem;
 	transition: 0.3s ease;
 	border-radius: 0.2rem;
-	background-color: #000000;
+	background-color: var(--background);
 	border: 2px solid #242424 ;
 	color: #cfcfcf;
 }
@@ -38,6 +38,7 @@ button, summary {
 	/* startje */
 	--color-text:#ffffff;
 	--color-background:#000000;
+	--font-fallback: "Roboto";
 }
   
 @keyframes marquee {
@@ -147,27 +148,29 @@ nav a {
   } */
 
   figure {
-	display: flex;
+	max-width: 80vw;
+	margin-left: auto;
+    margin-right: auto;	
   }
   
   figure img {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
-	object-position: center; /* normally it's the default value */
   }
 
 .projects{
-	width: 100vw;
+	width: 80vw;
 	display: flex;
-	flex-direction: column
+	flex-direction: column;
+	margin-left: auto;
+    margin-right: auto;	
 }
 
 .projects img{
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
-	object-position: center; /* normally it's the default value */	
 }
 
 .nda {
@@ -177,8 +180,10 @@ nav a {
 }
 
 .wrapper{
-	width: 100vw;
-	padding: 1rem
+	width: 80vw;
+	padding: 1rem;
+	margin-right: auto;
+	margin-left:auto
 }
 
 .expertise{
@@ -237,7 +242,6 @@ footer h3{
 } 
 
 .purplcontainer{
-	/* display: flex; */
 	width: 50vw;
 	height: 6rem;
 	transform : translate(-50%, -50%);
@@ -274,67 +278,3 @@ footer li {
 	text-decoration: underline;
 	
 }
-
-
-/* ABOOUT ME ANIMATION */
-/*  -----------------  */
-.scroll-container {
-	height: 100vh;
-	background: black;
-  }
-  
-  .speak {
-	margin: 150vh 0;
-  }
-  .speak:first-child {
-	margin-top: -50vh;
-  }
-  
-  .speak[data-scroll] {
-	transform: translatey(calc(var(--viewport-y) * 30vh));
-	opacity: calc(var(--visible-y));
-  }
-  
-  .scroll-sequence__content {
-	padding: 4em;
-  }
-  
-  .scroll-sequence {
-	position: sticky;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: -5;
-	height: 100vh;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-  }
-  
-  h1 {
-	font-size: 3em;
-	width: 60wv;
-	margin-bottom: 10px;
-  }
-  @media screen and (max-width: 600px) {
-	h1 {
-	  font-size: 2em;
-	  width: 100%;
-	}
-  }
-  
-  :root {
-	font-size: 20px;
-	font-family: "Open Sans", sans-serif;
-	color: white;
-	text-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
-  }
-  
-  body {
-	margin: 0;
-  }
-  
-  * {
-	box-sizing: border-box;
-  }
