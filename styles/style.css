@@ -7,6 +7,8 @@
 	box-sizing: border-box;
 }
 
+
+
 /*********************/
 /* Local Fonts*/
 /*********************/
@@ -59,7 +61,10 @@ body {
 	background-color: var(--color-background);
 	margin: 0;
 	font-family: neue, var(--font-fallback);
+	overflow-x: hidden;
+	overflow-y: auto;
 }
+
 
 p {
 	line-height: 1.5rem;
@@ -189,6 +194,7 @@ figure img {
 /* https://codepen.io/robinrendle/pen/LYNVpPX/a10a07290f047c4f553850f17e0c5c44 */
 /* images/stackedcardsExplenation.png */
 
+/* Project stacking cards */
 section:nth-of-type(1) {
 	margin-top: 8rem;
 	padding-top: 8rem;
@@ -209,25 +215,13 @@ section image:nth-of-type(n) {
 	object-fit: cover;
 }
 
-.card:nth-of-type(1n) {
-	top: 20px;
-	z-index: -5;
-}
-
-.card:nth-of-type(2n) {
-	top: 40px;
-	z-index: -4;
-}
-
-.card:nth-of-type(3) {
-	top: 60px;
-	z-index: -3;
-}
 
 span:nth-of-type(2) {
 	color: #454545;
 	text-align: center;
 }
+
+/* Expertise flexbox section */
 
 section:nth-of-type(2) {
 	margin: 1rem;
@@ -329,7 +323,7 @@ footer div:nth-last-of-type(3){
 	position: absolute;
 	top: 50%;
 	left: 50%;
-} 
+}
 
 .marqueeW {
 	color: #7c68fd;

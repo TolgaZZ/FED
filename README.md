@@ -127,8 +127,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  Ik heb deze week voornamlijk gekeken naar stack able cards. Kwam alleen maar achter libaries die dit regelen ipv pure css/javascript. Wel kreeg ik hulp van de student assistent met hoe ik dit zou kunnen maken en advies wat ik zou kunne veranderen. 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -141,13 +140,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
-
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
-
+  Je html opschonen. En probeer mischien van classes af te gaan en meer child selectoren te gebruiken. Ik heb de laatste dag nog een beetje hulp gehad van een studenten assistent die ik een bericht had gestuurd over een animatie. 
 </details>
 
 
@@ -161,29 +154,37 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  
+  De website heeft veel marquee tekst die het selecteren van sommige delen moeilijker kunnen maken. 
+  Voor de rest werkt te site prima en zijn alle texte groot genoeg
+
 
   #### Screenreader
   Hier korte omschrijving (met indien nodig afbeeldingen)
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Marquee  text vervangen met een div. Want Marquee leest de text namelijk niet en het veroorzaakt problemen met het verder gaan met de screenreader. 
 
   #### Muis en Toetsenbord 
   Hier korte omschrijving (met indien nodig afbeeldingen)
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Pagina werkt prima 
 
+  Site werkt prima voor mensen met een scherm toetstenbord. maar ook gewoon op mobiel. 
 
   #### Motoriek (shocks, elastiekjes)
   Hier korte omschrijving (met indien nodig afbeeldingen)
+  Het ging wat moeilijker maar lukte nogsteeds wel prima
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Niet echt iets nodig gehad heirvoor. 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
   Hier korte omschrijving (met indien nodig afbeeldingen)
+  De website is zwart/wit hierdoor was het erg makkelijk om de pagina te bekijken met alle brillen die we hadden. 
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Geen verbetering nodig. De teksten zijn grootgenoeg en geen problemen met kleur.
 
 </details>
 
@@ -199,6 +200,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  Ik liep vast in de animaties. Dus leek het me verstandig om gewoon beide pagina's te stylen en het animeren voor het laaste te laten. Dat heb ik ook gedaan nu. Ik zal eraan werken nu tot de deadline. 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -213,10 +215,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - maak gebruik van child selectoren
+  - Je kan beginne met je css en html opschonen
+  - Kreeg codepen/stackoverflow links wat ik kon gebruike voor de animaties
+
 
 </details>
 
@@ -230,19 +232,24 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
-
+  <img src="readme-images/img1.png" width="375px" alt="uitomst opdracht 1">
+  Alles is gelukt op 1 animatie na. En die was on scroll animate. Het lukte me niet omdat hij ook in reverse zou moeten kunnnen werken. 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  Ik heb geleerd hoe je cards kan stacken. Ook heb ik geleerd om met marquee's te werken ( ook met outlines). En heb ik ook mogen animaten met opacity's/javascript class add en remove. 
+  <img src="readme-images/stackedcards.png" width="250px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  On scroll animation die ook in reverse werkt als je terug omhoog scrolled. 
+  Ook is het me niet gelukt om een custom cursor te designen
+  wel had ik een video gevonden ervoor alleen niet genoeg tijd voor de deadline 
+  https://www.youtube.com/watch?v=B5qepgwIZxA&t=26s 
+  <img src="readme-images/scrollanimation.png" width="375px" alt="bummer">
 </details>
 
 
@@ -256,8 +263,23 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. https://codepen.io/robinrendle/pen/LYNVpPX/a10a07290f047c4f553850f17e0c5c44
+    Dit is een codepen die ik gebruikt heb om stacking cards mee te maken. 
+    ook heb ik gebruik gemaakkt van 
+  2. https://medium.com/@sanjeevy133/card-stack-scroll-effect-486cc3b55312 
+    Van deze pagina. Hier legen ze je uit hoe het stacking effect werkt. Doormiddel van de uitleg hier over position sticky ect begon ik het te begrijpen. 
+      <img src="readme-images/stackedcardsExplenation.png" width="375px" alt="bummer">
+  3. https://codepen.io/hexagoncircle/pen/eYMrGwW 
+    Ik had eerst marquee html tag gebruikt voor het sliding effect op de text. Ik kreeg het advies van een studentassistent om gebruik te maken van deze methode omdat marquee niet zo goed semantisch meer is. 
+    Ik maak op dit moment gebruik van de div methoden. Dat komt omdat ik wel wrappers nodig had en heir tussen een span of een div moest gaan kiezen. Zoals u ziet wordt dat ook hier gedaan.  
+
+  4. https://codepen.io/bstonedev/pen/MWWZgKz
+    Deze pagina maakt gebruik van on scroll animation dit heb ik gebruikt voor mijn about page. Wel heb ik het moeten aanpassen en heb ik ook gebruik gemaakt van de volgende codepen om dit inelkaar te zetten. 
+
+  5. https://codepen.io/ricardospalves/pen/JpOmMR?editors=1111
+    Deze heeft ook een soort effect zoals de stacking cards alleen moest er nog wel behoorlijk wat veranderd worden. Ik heb de javascript die ik tegen kwam hiervoor (bron 4) aangepassed en gebruikt. ik heb er een extra functie bij geschreven die ook het deleten van de layers achterop. Alleen werkt het nog niet hellemaal zoals ik wou. 
+
+
+
 
 </details>
