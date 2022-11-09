@@ -197,7 +197,7 @@ figure img {
 /* Project stacking cards */
 section:nth-of-type(1) {
 	margin-top: 8rem;
-	padding-top: 8rem;
+	/* padding-top: 8rem; */
 	max-width: 80vw;
 	margin: 0 auto;
 }
@@ -216,10 +216,17 @@ section image:nth-of-type(n) {
 }
 
 
-span:nth-of-type(2) {
+p.nda:nth-of-type(1) {
 	color: #454545;
 	text-align: center;
+
+	width: 80vw;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+
 
 /* Expertise flexbox section */
 

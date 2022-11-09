@@ -26,7 +26,7 @@ function fadeIn() {
 		// Check if the next element is covering or moving over the current element
 		if (i + 1 < elementsArray.length) {
 			var nextElem = elementsArray[i + 1];
-			if (nextElem.getBoundingClientRect().top == 0) {
+			if (nextElem.getBoundingClientRect().top <= 0) {
 				// Next element is coving the current element. Make current element invisible
 				elem.classList.add("underView");
 				elem.classList.remove("movingUnderView");
