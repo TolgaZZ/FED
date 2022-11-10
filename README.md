@@ -252,6 +252,25 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/scrollanimation.png" width="375px" alt="bummer">
 </details>
 
+## Eindgesprek Herkansing
+
+<details>
+  <summary>uitwerken voor eindgesprek</summary>
+
+  ### Verbeter punten voor de herkansing
+  - JavaScript is wat wonky
+  - HTML is voorzien van veel divjes, relatief, dus ze zijn wel functioneel, maar alle andere tags lijken een beetje weggevaagd te zijn, structuur met main/header mag ook beter.
+  - Eigenlijk wil ik wel gewoon wat meer content zien.
+  - Procesverslag is aanwezig.
+
+  ### Wat heb ik gedaan voor de herkansing
+  Voor de herkansing heb ik mijn menu veranderd in een sticky hamburger menu.
+  Ik heb ook een extra pagina erbij gebouwd met een grid layout via waar je naar de project details zou kunnen gaan.
+  Ook heb ik een contact formulier onderaan mijn pagina's toegevoegd. 
+  Ik ben ook gaan kijken naar een verandering voor de divjes alleen kwam ik met sections en spans niet veel verder omdat deze de marqueu breken. 
+
+</details>
+
 
 
 
