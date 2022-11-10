@@ -4,6 +4,8 @@
 *,
 *::after,
 *::before {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -319,41 +321,6 @@ section ul:nth-last-of-type(n) {
 	-webkit-text-stroke: 1px white;
 }
 
-/* Not working? */
-/* 
-footer div:nth-last-of-type(1){
-	width: 50vw;
-	height: 6rem;
-	transform: translate(-50%, -50%);
-	overflow: hidden;
-	margin-left: auto;
-	border: 2px solid #7c68fd;
-	border-radius: 4rem;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-}
-
-footer div:nth-last-of-type(2){
-	color: #7c68fd;
-	font-size: 2.5rem;
-	line-height: 12rem;
-	margin-right: 0rem;
-	text-transform: uppercase;
-	letter-spacing: 0.22rem;
-	font-family: neue;
-	justify-content: center;
-}
-
-footer div:nth-last-of-type(3){
-	position: absolute;
-	white-space: nowrap;
-	will-change: transform;
-	animation: marquee 25s linear infinite;
-} */
-
-
-
 .purplcontainer {
 	width: 50vw;
 	height: 6rem;
@@ -362,9 +329,9 @@ footer div:nth-last-of-type(3){
 	margin-left: auto;
 	border: 2px solid #7c68fd;
 	border-radius: 4rem;
-	position: absolute;
 	top: 50%;
 	left: 50%;
+	margin-top: 5rem;
 }
 
 .marqueeW {
@@ -386,7 +353,7 @@ footer div:nth-last-of-type(3){
 }
 
 footer {
-	display: flex;
+	display: relative;
 	flex-direction: column;
 	text-align: center;
 	margin-top: 5rem;
@@ -395,7 +362,7 @@ footer {
 }
 
 footer ul {
-	margin-top: 6rem;
+	margin-bottom: 3rem;
 	list-style: none;
 	padding: 0;
 }
@@ -424,18 +391,138 @@ footer h3 {
 	width: 100%;
 	flex-wrap: wrap;
 	margin: 0;
-	/* To remove default bottom margin */
 	padding: 0;
-	/* To remove default left padding */
 }
 
 .column {
 	margin: 0.5rem;
 }
 
-/*********************/
-/* MediaScreens */
-/*********************/
+
+form {
+	max-width: 50rem;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5rem;
+}
+
+form input,
+form textarea {
+	border: 0;
+	outline: 0;
+	padding: 1em;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	display: block;
+	width: 100%;
+	margin-top: 1em;
+	font-family: 'Merriweather', sans-serif;
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	resize: none;
+}
+
+
+
+form #input-submit {
+	padding: 0.8rem 2rem;
+	font-size: 1rem;
+	border: none;
+	outline: none;
+	font-family: neue, var(--font-fallback);
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: 0.3s ease;
+	border-radius: 0.2rem;
+	background-color: var(--background);
+	border: 2px solid #242424;
+	color: #8a8a8a;
+}
+
+form input {
+	padding: 0.8rem 2rem;
+	font-size: 1rem;
+	border: none;
+	outline: none;
+	font-family: neue, var(--font-fallback);
+	cursor: pointer;
+	transition: 0.3s ease;
+	border-radius: 0.6rem;
+	background-color: var(--background);
+	border: 2px solid #242424;
+	color: #ebebeb;
+	background-color: #202020;
+}
+
+form #input-message {
+	padding: 0.8rem 2rem;
+	font-size: 1rem;
+	border: none;
+	outline: none;
+	font-family: neue, var(--font-fallback);
+	cursor: pointer;
+	transition: 0.3s ease;
+	border-radius: 0.6rem;
+	background-color: var(--background);
+	border: 2px solid #242424;
+	color: #ebebeb;
+	background-color: #202020;
+}
+
+
+
+form #input-submit:hover {
+	color: #FFFFFF;
+	background-color: #7c68fd;
+}
+
+form textarea {
+	height: 8rem;
+}
+
+.cf span:nth-child(1) {
+	float: left;
+	width: 48%;
+	margin-bottom: 1em;
+}
+
+.cf textarea:nth-child(1) {
+	width: 48%;
+}
+
+.left {
+	margin-right: 2%;
+}
+
+@media (max-width: 600px) {
+	.cf span:nth-child(1) {
+		width: 100%;
+		float: none;
+		margin-bottom: 0;
+	}
+
+	.cf textarea:nth-child(1) {
+		width: 100%;
+	}
+}
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+	content: " ";
+	/* 1 */
+	display: table;
+	/* 2 */
+}
+
+.cf:after {
+	clear: both;
+}
+
+
 
 @media (min-width: 48em) {
 	.columns {
@@ -485,16 +572,16 @@ footer h3 {
 		-webkit-transform: translateY(-8px) rotate(-45deg);
 		transform: translateY(-8px) rotate(-45deg);
 	}
+
 }
+
+
 
 
 /*********************/
 /* About page styling*/
 /*********************/
 
-/* .stack {
-	background-color: #000;
-} */
 
 .stack__card {
 	display: flex;
@@ -507,8 +594,6 @@ footer h3 {
 	opacity: 1;
 	color: #fff;
 	width: 80vw;
-	/* margin-left: auto;
-	margin-right: auto; */
 }
 
 .movingUnderView {
@@ -519,3 +604,104 @@ footer h3 {
 	opacity: 0;
 }
 
+
+
+
+/* Project page */
+
+
+/* We need a 2/2/2 grid  */
+/*3/3*/
+/* 6 */
+
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(7, auto);
+	align-items: center;
+	justify-content: center;
+	padding-top: 10rem;
+	gap: .5rem;
+}
+
+.projects .grid img {
+	height: 30vh;
+	cursor: pointer;
+}
+
+.projects img:nth-child(1) {
+	object-fit: cover;
+	grid-column: 1/3;
+}
+
+.projects img:nth-child(2) {
+	object-fit: cover;
+	grid-column: 3/5;
+}
+
+.projects img:nth-child(3) {
+	object-fit: cover;
+	grid-column: 5/7;
+}
+
+.projects img:nth-child(4) {
+	object-fit: cover;
+	grid-column: 1/4;
+}
+
+.projects img:nth-child(5) {
+	object-fit: cover;
+	grid-column: 4/7;
+}
+
+.projects img:nth-child(6) {
+	object-fit: cover;
+	grid-column: 1/7;
+}
+
+@media only screen and (max-width: 992px) {
+
+	.projects .grid {
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+		align-items: center;
+		justify-content: center;
+		padding-top: 10rem;
+		gap: 1rem;
+
+	}
+
+
+	.projects img:nth-child(1) {
+		object-fit: cover;
+		grid-column: 1/3;
+
+	}
+
+	.projects img:nth-child(2) {
+		object-fit: cover;
+		grid-column: 1/3;
+
+	}
+
+	.projects img:nth-child(3) {
+		object-fit: cover;
+		grid-column: 1/3;
+
+	}
+
+	.projects img:nth-child(4) {
+		object-fit: cover;
+		grid-column: 1/3;
+	}
+
+	.projects img:nth-child(5) {
+		object-fit: cover;
+		grid-column: 1/3;
+	}
+
+	.projects img:nth-child(6) {
+		object-fit: cover;
+		grid-column: 1/3;
+	}
+}
