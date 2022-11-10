@@ -9,7 +9,9 @@
 	box-sizing: border-box;
 }
 
-
+::-webkit-scrollbar {
+    display: none;
+}
 
 /*********************/
 /* Local Fonts*/
@@ -66,7 +68,6 @@ body {
 	overflow-x: hidden;
 	overflow-y: auto;
 }
-
 
 p {
 	line-height: 1.5rem;
@@ -134,9 +135,6 @@ a:active {
 	background-color: white;
 }
 
-
-
-
 a:hover {
 	color: #FFFFFF;
 }
@@ -194,6 +192,8 @@ button:hover {
 	height: 25rem;
 }
 
+
+
 .track {
 	position: absolute;
 	white-space: nowrap;
@@ -230,7 +230,6 @@ figure img {
 
 /* https://codepen.io/robinrendle/pen/LYNVpPX/a10a07290f047c4f553850f17e0c5c44 */
 /* images/stackedcardsExplenation.png */
-
 /* Project stacking cards */
 section:nth-of-type(1) {
 	margin-top: 8rem;
@@ -240,9 +239,9 @@ section:nth-of-type(1) {
 }
 
 section figure:nth-of-type(n) {
-	top: 30px;
+	top: 2rem;
 	position: sticky;
-	margin-bottom: 10px;
+	margin-bottom: 0.75rem;
 	object-fit: fill;
 	display: block;
 }
@@ -256,17 +255,13 @@ section image:nth-of-type(n) {
 p.nda:nth-of-type(1) {
 	color: #454545;
 	text-align: center;
-
 	width: 80vw;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-
-
 /* Expertise flexbox section */
-
 section:nth-of-type(2) {
 	margin: 1rem;
 	max-width: 80vw;
@@ -293,8 +288,8 @@ section p:nth-of-type(1) {
 	font-weight: 400;
 	font-style: normal;
 	text-transform: uppercase;
-	letter-spacing: 1px;
-	border-bottom: 1px solid #ffffff;
+	letter-spacing: 0.1rem;
+	border-bottom: 0.1rem solid #ffffff;
 	padding-bottom: 0.5rem;
 	display: flex;
 	flex-direction: row;
@@ -318,7 +313,7 @@ section ul:nth-last-of-type(n) {
 /* Maybe possible to make a var of this? */
 .outline {
 	color: #000000;
-	-webkit-text-stroke: 1px white;
+	-webkit-text-stroke: 0.1rem white;
 }
 
 .purplcontainer {
@@ -360,6 +355,8 @@ footer {
 	text-transform: uppercase;
 	position: relative;
 }
+
+
 
 footer ul {
 	margin-bottom: 3rem;
@@ -412,9 +409,9 @@ form textarea {
 	border: 0;
 	outline: 0;
 	padding: 1em;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	border-radius: 8px;
+	-moz-border-radius: 0.5rem;
+	-webkit-border-radius: 0.5rem;
+	border-radius: 0.5rem;
 	display: block;
 	width: 100%;
 	margin-top: 1em;
@@ -424,8 +421,6 @@ form textarea {
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 	resize: none;
 }
-
-
 
 form #input-submit {
 	padding: 0.8rem 2rem;
@@ -523,15 +518,14 @@ form textarea {
 }
 
 
-
-@media (min-width: 48em) {
+@media (min-width: 48rem) {
 	.columns {
 		flex-wrap: nowrap;
 	}
 }
 
 /* Hamburger Menu */
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 62rem) {
 	.nav-menu {
 		position: fixed;
 		left: -100%;
@@ -544,7 +538,6 @@ form textarea {
 		transition: 0.3s;
 		z-index: 5;
 	}
-
 
 	.nav-menu.active {
 		left: 0;
@@ -575,13 +568,9 @@ form textarea {
 
 }
 
-
-
-
 /*********************/
 /* About page styling*/
 /*********************/
-
 
 .stack__card {
 	display: flex;
@@ -604,17 +593,7 @@ form textarea {
 	opacity: 0;
 }
 
-
-
-
-/* Project page */
-
-
-/* We need a 2/2/2 grid  */
-/*3/3*/
-/* 6 */
-
-
+/* Project grid */
 .grid {
 	display: grid;
 	grid-template-columns: repeat(7, auto);
